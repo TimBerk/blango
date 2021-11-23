@@ -36,6 +36,7 @@ class Dev(Configuration):
         'crispy_bootstrap5',
         'debug_toolbar',
 
+        'blango_auth',
         'blog'
     ]
 
@@ -85,6 +86,7 @@ class Dev(Configuration):
 
     # Password validation
     # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+    AUTH_USER_MODEL = "blango_auth.User"
 
     AUTH_PASSWORD_VALIDATORS = [
         {
@@ -134,7 +136,7 @@ class Dev(Configuration):
 
     CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
     CRISPY_TEMPLATE_PACK = 'bootstrap5'
-    
+
     LOGGING = {
         "version": 1,
         "disable_existing_loggers": False,

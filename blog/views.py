@@ -1,9 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.cache import cache_page
 from django.utils import timezone
+import logging
 
 from blog.forms import CommentForm
 from blog.models import Post
+
+
+logger = logging.getLogger(__name__)
 
 
 @cache_page(300)
